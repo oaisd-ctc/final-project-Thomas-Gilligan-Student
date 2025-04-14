@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public class UI : MonoBehaviour
 {
@@ -9,6 +10,6 @@ public class UI : MonoBehaviour
 
         Button newGame = root.Q<Button>("NewGame");
 
-        newGame.clicked += () => Debug.Log("clicked");
+        newGame.clicked += () => SceneManager.LoadScene("Game");
     }
 }
