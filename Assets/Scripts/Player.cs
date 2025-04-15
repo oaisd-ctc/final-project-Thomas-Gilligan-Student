@@ -6,10 +6,12 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float jumpForce = 6.0f;
+    public float jumpForce = 8.0f;
     public Rigidbody2D rigid;
     public bool isFalling = true;
     public float speed = 5.0f;
+    public LayerMask groundLayer;
+    public Transform feetPos;
 
     void Start()
     {
@@ -18,27 +20,19 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (!isFalling && (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W)) || Input.GetKey(KeyCode.UpArrow))
+        Collider2D hit = Physics2D.OverlapCircle(feetPos.position, 0.2f, groundLayer);
+
+        isFalling = (hit) ? false : true;
+
+        if (!isFalling)
         {
-            rigid.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W))
+            {
+                rigid.velocity = new Vector2(rigid.velocity.x, 0f);
+                rigid.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            }
         }
         
         rigid.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, rigid.velocity.y);
-    }
-
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Ground"))
-        {
-            isFalling = false;
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Ground"))
-        {
-            isFalling = true;
-        }
     }
 }
