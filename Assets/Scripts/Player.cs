@@ -11,7 +11,8 @@ public class Player : MonoBehaviour
     public bool isFalling = true;
     public float speed = 5.0f;
     public LayerMask groundLayer;
-    public Transform feetPos;
+    public Transform lFoot;
+    public Transform rFoot;
 
     void Start()
     {
@@ -20,9 +21,13 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        Collider2D hit = Physics2D.OverlapCircle(feetPos.position, 0.2f, groundLayer);
+        ContactFilter2D filter = new ContactFilter2D();
+        filter.SetLayerMask(groundLayer);
+        filter.useLayerMask = true;
 
-        isFalling = (hit) ? false : true;
+        RaycastHit2D rHit = Physics2D.Raycast(rFoot.position, Vector2.down, 0.1f, groundLayer);
+        RaycastHit2D lHit = Physics2D.Raycast(lFoot.position, Vector2.down, 0.1f, groundLayer);
+        isFalling = (lHit || rHit) ? false : true;
 
         if (!isFalling)
         {
