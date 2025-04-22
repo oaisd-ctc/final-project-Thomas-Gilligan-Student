@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -8,13 +6,14 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float jumpForce = 8.0f;
+    public float jumpForce = 7.0f;
     public Rigidbody2D rigid;
     public bool isFalling = true;
     public float speed = 5.0f;
     public LayerMask groundLayer;
-    public Transform lFoot;
-    public Transform rFoot;
+    public Transform lCast;
+    public Transform mCast;
+    public Transform rCast;
 
     Animator animator;
     SpriteRenderer sprite;
@@ -28,8 +27,9 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        RaycastHit2D rHit = Physics2D.Raycast(rFoot.position, Vector2.down, 0.1f, groundLayer);
-        RaycastHit2D lHit = Physics2D.Raycast(lFoot.position, Vector2.down, 0.1f, groundLayer);
+        bool wasFalling = isFalling;
+        RaycastHit2D rHit = Physics2D.Raycast(rCast.position, Vector2.down, 0.1f, groundLayer);
+        RaycastHit2D lHit = Physics2D.Raycast(lCast.position, Vector2.down, 0.1f, groundLayer);
         isFalling = (lHit || rHit) ? false : true;
 
         if (!isFalling)
@@ -51,5 +51,12 @@ public class Player : MonoBehaviour
         if (Input.GetMouseButtonDown(1)) animator.SetTrigger("Ability");
 
         if (Input.GetKeyDown(KeyCode.E)) animator.SetTrigger("Hit");
+
+        if (wasFalling && !isFalling) animator.SetTrigger("Fall");
+
+        RaycastHit2D mHit = Physics2D.Raycast(mCast.position, Vector2.down, 0.1f, groundLayer);
+
+        if (sprite.flipX) animator.SetBool("Lean", !mHit && rHit);
+        else animator.SetBool("Lean", !mHit && lHit);
     }
 }
