@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     private Vector3 targetPoint = Vector3.zero;
-    public Player player;
+    public PlayerMovement player;
     public float moveSpeed;
     public float lookAheadDistance = 5f, lookAheadSpeed = 3f;
     private float lookOffset;

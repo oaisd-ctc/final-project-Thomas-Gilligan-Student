@@ -8,8 +8,8 @@ public class UI : MonoBehaviour
     {
         VisualElement root = GetComponent<UIDocument>().rootVisualElement;
 
-        Button newGame = root.Q<Button>("NewGame");
+        Button play = root.Q<Button>("Play");
 
-        newGame.clicked += () => SceneManager.LoadScene("Game");
+        play.clicked += () => SceneManager.LoadScene("Game");
     }
 }

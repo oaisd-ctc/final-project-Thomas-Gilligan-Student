@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/TitleScreen.uss?fileID=7433441132597879392&amp;guid=6c5d44012483e8d45b65511cac3c593b&amp;type=3#TitleScreen" />
+    <ui:VisualElement style="flex-grow: 1; align-items: center; justify-content: center; background-color: rgba(51, 51, 51, 0.52);">
+        <ui:VisualElement style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 279px; height: auto; margin-left: 0; margin-right: 0; margin-top: 90px; margin-bottom: 100px; align-items: center; justify-content: flex-start; -unity-text-align: upper-center;">
+            <ui:Label tabindex="-1" text="Rat Chef" display-tooltip-when-elided="true" name="GameTitle" style="color: rgb(255, 255, 255); -unity-text-align: middle-center; flex-grow: 0; font-size: 200px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; align-items: center; -unity-font-definition: url(&apos;project://database/Assets/UI/Jersey15-Regular.ttf?fileID=12800000&amp;guid=2c36c31ef3b2a8043857db270c711cac&amp;type=3#Jersey15-Regular&apos;); -unity-font-style: normal;" />
+        </ui:VisualElement>
+        <ui:Button text="Resume" display-tooltip-when-elided="true" name="Resume" class="button" style="background-color: rgba(0, 0, 0, 0); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-left-color: rgba(0, 0, 0, 0); border-right-color: rgba(0, 0, 0, 0); border-top-color: rgba(0, 0, 0, 0); border-bottom-color: rgba(0, 0, 0, 0); font-size: 80px; color: rgb(237, 237, 237); margin-bottom: 96px;" />
+    </ui:VisualElement>
+</ui:UXML>
