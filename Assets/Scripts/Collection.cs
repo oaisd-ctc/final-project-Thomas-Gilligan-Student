@@ -19,22 +19,12 @@ public class Collection : MonoBehaviour
         foreach (Collectible collectible in collection)
         {
             GameObject instance = Instantiate(ingredientPrefab, ingredientPanel.transform);
-            instance.transform.localPosition = new Vector3(instance.transform.localPosition.x, -100 - (i * 150), 0);
+            instance.transform.localPosition = new Vector3(instance.transform.localPosition.x, -85 - (i * 120), 0);
             instance.GetComponent<Image>().sprite = collectible.itemSprite;
             instance.GetComponentInChildren<TextMeshProUGUI>().text = (collectible.amountNeeded > 1) ? $"{collectible.amountNeeded}" : "";
             instance.name = collectible.itemName;
             i++;
         }
-    }
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -74,10 +64,10 @@ public class Collection : MonoBehaviour
             textComponent.color = new Color(0, 255, 0, 1);
         }
 
-        lastTriggered.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.5f);
+        //lastTriggered.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.5f);
+        Destroy(lastTriggered);
     }
 }
-
 
 [System.Serializable]
 public class Collectible
