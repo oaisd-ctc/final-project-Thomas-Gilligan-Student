@@ -76,6 +76,7 @@ GameObject:
   - component: {fileID: 632911455729821918}
   - component: {fileID: 1547090195734294306}
   - component: {fileID: 3439250495920120406}
+  - component: {fileID: 4013726199895767386}
   m_Layer: 0
   m_Name: PlayerRat
   m_TagString: Player
@@ -238,6 +239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffb9c8c137dba0f4992a6320816d5aac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  promptHandler: {fileID: 0}
   jumpForce: 7
   rigid: {fileID: 3198098304615711137}
   isFalling: 1
@@ -270,6 +272,29 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4013726199895767386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3128388768711923933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f21a630fab143c44b90d79f2429eac24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collection:
+  - itemName: Bread
+    amountNeeded: 1
+    itemSprite: {fileID: 21300000, guid: c728868677dfad541b6543a1f2aec055, type: 3}
+  - itemName: Waffle
+    amountNeeded: 2
+    itemSprite: {fileID: 21300000, guid: 481361217e20600488dc50b0c21f0378, type: 3}
+  - itemName: Steak
+    amountNeeded: 1
+    itemSprite: {fileID: 21300000, guid: 2d32f96b28dc0d9479129a87f6fcc318, type: 3}
+  ingredientPrefab: {fileID: 3562027361740285991, guid: d224292061c96584496df9a35af11a70, type: 3}
 --- !u!1 &7678487223853967653
 GameObject:
   m_ObjectHideFlags: 0

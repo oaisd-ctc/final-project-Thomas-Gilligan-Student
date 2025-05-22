@@ -22,18 +22,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void PauseGame()
+    public void PauseGame(bool noMenu = false)
     {
         isPaused = true;
         Time.timeScale = 0.0f;
-        pauseMenu.gameObject.SetActive(true);
-        
-        VisualElement root = pauseMenu.rootVisualElement;
-        Button resume = root.Q<Button>("Resume");
-        resume.clicked += () => ResumeGame();
+
+        if (!noMenu)
+        {
+            pauseMenu.gameObject.SetActive(true);
+            VisualElement root = pauseMenu.rootVisualElement;
+            Button resume = root.Q<Button>("Resume");
+            resume.clicked += () => ResumeGame();
+        }
     }
 
-    void ResumeGame()
+    public void ResumeGame()
     {
         isPaused = false;
         Time.timeScale = 1.0f;
