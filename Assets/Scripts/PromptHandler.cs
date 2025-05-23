@@ -16,14 +16,12 @@ public class PromptHandler : MonoBehaviour
 
     }
 
-    void LateUpdate()
+    void Update()
     {
         if (gameObject.activeSelf)
         {
             if (Input.GetKeyDown(triggerKey))
             {
-                Debug.Log("fdafdsa");
-
                 gameObject.SetActive(false);
                 triggerKey = KeyCode.Space;
 
@@ -40,8 +38,6 @@ public class PromptHandler : MonoBehaviour
             promptText.text = text;
             continueText.text = "Press " + key + " to Continue";
             triggerKey = key;
-
-            Debug.Log(gameObject.activeSelf);
             
             gameManager.PauseGame(true);
         }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class Collection : MonoBehaviour
@@ -48,6 +49,26 @@ public class Collection : MonoBehaviour
 
     void CollectItem(Collectible found)
     {
+        if (found.itemName == "Cookie")
+        {
+            bool finished = true;
+            foreach (Collectible collectible in collection)
+            {
+                if (collectible.amountNeeded != 0)
+                {
+                    finished = false;
+                }
+            }
+
+            if (!finished)
+            {
+                return;
+            }
+            else
+            {
+                lastTriggered.GetComponent<PromptTrigger>().prompt.TriggerPrompt("You have found everything you need for your yummy snack! Now it's time to move onto some meals.", KeyCode.E);
+            }
+        }
         found.amountNeeded--;
         GameObject instance = GameObject.Find($"Ingredient Panel/{found.itemName}");
         TextMeshProUGUI textComponent = instance.GetComponentInChildren<TextMeshProUGUI>();

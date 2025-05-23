@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,10 +16,8 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (pauseMenu.gameObject.activeSelf)
-                ResumeGame();
-            else
-                PauseGame();
+            if (pauseMenu.gameObject.activeSelf) ResumeGame();
+            else PauseGame();
         }
     }
 

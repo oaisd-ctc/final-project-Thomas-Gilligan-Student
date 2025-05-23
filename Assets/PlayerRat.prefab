@@ -239,7 +239,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffb9c8c137dba0f4992a6320816d5aac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  promptHandler: {fileID: 0}
   jumpForce: 7
   rigid: {fileID: 3198098304615711137}
   isFalling: 1
@@ -285,15 +284,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collection:
-  - itemName: Bread
+  - itemName: Cherry
     amountNeeded: 1
-    itemSprite: {fileID: 21300000, guid: c728868677dfad541b6543a1f2aec055, type: 3}
-  - itemName: Waffle
-    amountNeeded: 2
-    itemSprite: {fileID: 21300000, guid: 481361217e20600488dc50b0c21f0378, type: 3}
-  - itemName: Steak
+    itemSprite: {fileID: 21300000, guid: bf7bb96fa1c415b4fb03ff227c934adc, type: 3}
+  - itemName: Apple
     amountNeeded: 1
-    itemSprite: {fileID: 21300000, guid: 2d32f96b28dc0d9479129a87f6fcc318, type: 3}
+    itemSprite: {fileID: 21300000, guid: 61d01e8616313344b978a6518fd86ed6, type: 3}
   ingredientPrefab: {fileID: 3562027361740285991, guid: d224292061c96584496df9a35af11a70, type: 3}
 --- !u!1 &7678487223853967653
 GameObject:

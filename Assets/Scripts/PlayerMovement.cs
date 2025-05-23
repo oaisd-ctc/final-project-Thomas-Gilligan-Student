@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
     }
 
-    void Update()
+    void LateUpdate()
     {
         if (!gameManager.isPaused)
         {
@@ -52,10 +52,10 @@ public class PlayerMovement : MonoBehaviour
             
             rigid.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, rigid.velocity.y);
 
-            if (Input.GetMouseButtonDown(0)) animator.SetTrigger("Attack");
-            if (Input.GetMouseButtonDown(1)) animator.SetTrigger("Ability");
+            //if (Input.GetMouseButtonDown(0)) animator.SetTrigger("Attack");
+            //if (Input.GetMouseButtonDown(1)) animator.SetTrigger("Ability");
 
-            if (Input.GetKeyDown(KeyCode.E)) animator.SetTrigger("Hit");
+            //if (Input.GetKeyDown(KeyCode.E)) animator.SetTrigger("Hit");
 
             animator.SetBool("Run", Input.GetAxis("Horizontal") != 0);
             if (Input.GetAxis("Horizontal") != 0) sprite.flipX = Input.GetAxis("Horizontal") < 0;
