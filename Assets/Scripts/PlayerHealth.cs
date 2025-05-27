@@ -10,6 +10,12 @@ public class PlayerHealth : MonoBehaviour
     public GameObject healthBar;
     public Sprite fullHealth;
     public Sprite halfHealth;
+    float damageTime;
+
+    void OnEnable()
+    {
+        damageTime = Time.time;
+    }
 
     public void TakeDamage()
     {
@@ -28,5 +34,17 @@ public class PlayerHealth : MonoBehaviour
     {
         health = 2;
         healthBar.GetComponent<Image>().sprite = fullHealth;
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Damage Player")
+        {
+            if (Time.time >= damageTime + 0.2f)
+            {
+                damageTime = Time.time;
+                TakeDamage();
+            }
+        }
     }
 }

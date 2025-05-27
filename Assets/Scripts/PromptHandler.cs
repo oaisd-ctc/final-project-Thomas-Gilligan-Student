@@ -11,11 +11,6 @@ public class PromptHandler : MonoBehaviour
     [SerializeField] KeyCode triggerKey = KeyCode.Space;
     public GameManager gameManager;
 
-    void Start()
-    {
-
-    }
-
     void Update()
     {
         if (gameObject.activeSelf)

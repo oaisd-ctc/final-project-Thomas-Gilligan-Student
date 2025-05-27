@@ -22,8 +22,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        DontDestroyOnLoad(gameObject);
-
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 
         rigid = GetComponent<Rigidbody2D>();

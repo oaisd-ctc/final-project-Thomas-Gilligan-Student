@@ -7,11 +7,6 @@ public class GameManager : MonoBehaviour
     public UIDocument pauseMenu;
     [HideInInspector] public bool isPaused;
 
-    void Start()
-    {
-        DontDestroyOnLoad(this.gameObject);
-    }
-
     void LateUpdate()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -19,6 +14,9 @@ public class GameManager : MonoBehaviour
             if (pauseMenu.gameObject.activeSelf) ResumeGame();
             else PauseGame();
         }
+
+        if (Input.GetKeyDown(KeyCode.Keypad3))
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void PauseGame(bool noMenu = false)
