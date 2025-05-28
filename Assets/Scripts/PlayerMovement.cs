@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
             
-            rigid.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, rigid.velocity.y);
+            rigid.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * speed, rigid.velocity.y);
 
             //if (Input.GetMouseButtonDown(0)) animator.SetTrigger("Attack");
             //if (Input.GetMouseButtonDown(1)) animator.SetTrigger("Ability");
