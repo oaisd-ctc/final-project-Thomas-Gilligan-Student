@@ -47,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
                     rigid.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
                 }
             }
-            
+
             rigid.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * speed, rigid.velocity.y);
 
             //if (Input.GetMouseButtonDown(0)) animator.SetTrigger("Attack");
@@ -64,6 +64,14 @@ public class PlayerMovement : MonoBehaviour
 
             if (sprite.flipX) animator.SetBool("Lean", !mHit && rHit);
             else animator.SetBool("Lean", !mHit && lHit);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Void")
+        {
+            transform.position = Vector2.zero;
         }
     }
 }

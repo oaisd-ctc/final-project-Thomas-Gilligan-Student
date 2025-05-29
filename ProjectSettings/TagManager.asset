@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Platform
   - Damage Player
+  - Void
   layers:
   - Default
   - TransparentFX

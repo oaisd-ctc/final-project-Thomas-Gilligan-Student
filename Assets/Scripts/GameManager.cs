@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 
     void LateUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
         {
             if (pauseMenu.gameObject.activeSelf) ResumeGame();
             else PauseGame();

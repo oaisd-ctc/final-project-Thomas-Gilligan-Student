@@ -11,6 +11,12 @@ public class PlayerHealth : MonoBehaviour
     public Sprite fullHealth;
     public Sprite halfHealth;
     float damageTime;
+    Rigidbody2D rigid;
+
+    void Start()
+    {
+        rigid = GetComponent<Rigidbody2D>();
+    }
 
     void OnEnable()
     {
@@ -23,6 +29,7 @@ public class PlayerHealth : MonoBehaviour
         {
             healthBar.GetComponent<Image>().sprite = halfHealth;
             health--;
+            rigid.velocity *= Vector2.down;
         }
         else
         {
