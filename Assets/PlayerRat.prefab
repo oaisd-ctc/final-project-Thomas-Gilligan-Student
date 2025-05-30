@@ -77,6 +77,7 @@ GameObject:
   - component: {fileID: 1547090195734294306}
   - component: {fileID: 3439250495920120406}
   - component: {fileID: 4013726199895767386}
+  - component: {fileID: 3658744838209647026}
   m_Layer: 0
   m_Name: PlayerRat
   m_TagString: Player
@@ -291,6 +292,26 @@ MonoBehaviour:
     amountNeeded: 1
     itemSprite: {fileID: 21300000, guid: 61d01e8616313344b978a6518fd86ed6, type: 3}
   ingredientPrefab: {fileID: 3562027361740285991, guid: d224292061c96584496df9a35af11a70, type: 3}
+--- !u!114 &3658744838209647026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3128388768711923933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f6867fb27ec37740870f51d58e75cd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 5
+  healthBar: {fileID: 0}
+  healthSprites:
+  - {fileID: 1999888656430529056, guid: 70713768a5290264ebc7ed5355899ee9, type: 3}
+  - {fileID: -624567904, guid: 70713768a5290264ebc7ed5355899ee9, type: 3}
+  - {fileID: -1003096431, guid: 70713768a5290264ebc7ed5355899ee9, type: 3}
+  - {fileID: 137588265, guid: 70713768a5290264ebc7ed5355899ee9, type: 3}
+  - {fileID: -825525684, guid: 70713768a5290264ebc7ed5355899ee9, type: 3}
 --- !u!1 &7678487223853967653
 GameObject:
   m_ObjectHideFlags: 0

@@ -48,7 +48,8 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
 
-            rigid.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * speed, rigid.velocity.y);
+            float axis = Input.GetAxisRaw("Horizontal");
+            rigid.velocity = new Vector2(axis * speed, rigid.velocity.y);
 
             //if (Input.GetMouseButtonDown(0)) animator.SetTrigger("Attack");
             //if (Input.GetMouseButtonDown(1)) animator.SetTrigger("Ability");
@@ -56,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
             //if (Input.GetKeyDown(KeyCode.E)) animator.SetTrigger("Hit");
 
             animator.SetBool("Run", Input.GetAxis("Horizontal") != 0);
-            if (Input.GetAxis("Horizontal") != 0) sprite.flipX = Input.GetAxis("Horizontal") < 0;
+            if (axis != 0) sprite.flipX = axis < 0;
 
             if (wasFalling && !isFalling) animator.SetTrigger("Fall");
 

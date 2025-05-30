@@ -41,9 +41,9 @@ public class CameraController : MonoBehaviour
 
         targetPoint.x = player.transform.position.x + lookOffset;
 
-        if (targetPoint.y < -1.5f)
+        if (targetPoint.y < -2f)
         {
-            targetPoint.y = -1.5f;
+            targetPoint.y = -2f;
         }
 
 

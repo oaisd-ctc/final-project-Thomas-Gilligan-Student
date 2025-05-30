@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 13712feb8a963ed4ba6f5529a1eb0618
+guid: 70713768a5290264ebc7ed5355899ee9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5814396354153317510
-    second: butt1_0
+      213: 1999888656430529056
+    second: HealthBars_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -134,13 +134,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: butt1_0
+      name: HealthBars_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 64
-        height: 16
+        y: 32
+        width: 67
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -148,8 +148,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 68482a89da2e0b050800000000000000
-      internalID: 5814396354153317510
+      spriteID: 02affdc132801cb10800000000000000
+      internalID: 1999888656430529056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBars_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 24
+        width: 67
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 003da4bf42aefec48a834461ce133bdb
+      internalID: -624567904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBars_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 67
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4793d857a939574d90bfcec042dbd68
+      internalID: -1003096431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBars_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8
+        width: 67
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dc315387561cd544bdc32c8fae16a61
+      internalID: 137588265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBars_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 67
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d869769c47dd4fd428166ba7333cb48c
+      internalID: -825525684
       vertices: []
       indices: 
       edges: []
@@ -157,7 +241,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 4e03b87de97f9b24680546240baf3ddb
     internalID: 0
     vertices: []
     indices: 
@@ -165,7 +249,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      butt1_0: 5814396354153317510
+      HealthBars_0: 1999888656430529056
+      HealthBars_1: -624567904
+      HealthBars_2: -1003096431
+      HealthBars_3: 137588265
+      HealthBars_4: -825525684
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

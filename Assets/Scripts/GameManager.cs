@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
             VisualElement root = pauseMenu.rootVisualElement;
             Button resume = root.Q<Button>("Resume");
             resume.clicked += () => ResumeGame();
+            Button mainMenu = root.Q<Button>("MainMenu");
+            mainMenu.clicked += () => SceneManager.LoadScene("TitleScene");
         }
     }
 
