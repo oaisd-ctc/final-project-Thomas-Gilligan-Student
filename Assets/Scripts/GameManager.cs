@@ -15,8 +15,8 @@ public class GameManager : MonoBehaviour
             else PauseGame();
         }
 
-        if (Input.GetKeyDown(KeyCode.Keypad3))
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //if (Input.GetKeyDown(KeyCode.Keypad3))
+        //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void PauseGame(bool noMenu = false)
