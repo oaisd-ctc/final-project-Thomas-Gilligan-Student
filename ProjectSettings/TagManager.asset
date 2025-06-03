@@ -60,3 +60,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Spikes
+    uniqueID: 2185033747
+    locked: 0
